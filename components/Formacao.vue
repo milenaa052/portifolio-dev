@@ -107,32 +107,27 @@ img {
 
 @media screen and (max-width: 760px){
   .wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin-top: 1%;
-  }
-
-  .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .titulo {
-    margin-top: 140px;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
 
   img {
     width: 60%;
-    max-width: 80px;
     display: block;
-    align-items: center;
+    max-width: 80px;
   }
 
   .descricao {
     text-align: center;
-    margin-left: 20px;
+    margin: 5px 0;
+  }
+
+  .titulo {
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .wrapper .titulo, .wrapper img, .wrapper .descricao {
+    order: 1; 
   }
 }
 
