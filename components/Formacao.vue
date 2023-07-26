@@ -29,11 +29,11 @@
           </div>
       </div>
   
-      <div class="d-flex">
-        <b-button variant="outline-light">
-          <b-img src="../static/seta.png"></b-img>
-        </b-button>
-      </div>
+        <div class="d-flex">
+          <b-button variant="outline-light" class="ml-auto">
+            <b-img class="seta" src="../static/seta.png"></b-img>
+          </b-button>
+        </div>
     </section>
   </template>
 
@@ -88,9 +88,8 @@ img {
     align-items: center;
 }
 
-.botao{
-    display: flex;
-    justify-content: flex-end;
+.d-flex.justify-content-center {
+  margin-top: 30px;
 }
 
 .b-button {
@@ -98,9 +97,13 @@ img {
   height: 60px;
 }
 
-.b-img {
-  width: 100%;
-  height: 100%;
+.btn-outline-light{
+  border: 2px solid transparent;
+}
+
+.seta {
+  width: 90px;
+  height: 90px;
   object-fit: contain;
 }
 

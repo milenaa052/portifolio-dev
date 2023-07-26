@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router';
-const showOptions = ref(false);
 
 function toggleOptions() {
   showOptions.value = !showOptions.value;
@@ -17,23 +15,36 @@ function toggleOptions() {
       </div>
   
       <div class="options" :class="{ active: showOptions }">
-        <a to="/">Inicio</a>
-        <a to="/about">Sobre</a>
-        <a to="/formacao">Formação</a>
-        <a to="/certificados">Certificados</a>
-        <a to="/experiencia">Experiência</a>
-        <a to="/skils">Skils</a>
-        <a to="/projetos">Projetos</a>
-        <a to="/contato">Contato</a>
+        <a @click="navigateTo('/')">Inicio</a>
+        <a @click="navigateTo('/about')">Sobre</a>
+        <a @click="navigateTo('/formacao')">Formação</a>
+        <a @click="navigateTo('/certificados')">Certificados</a>
+        <a @click="navigateTo('/experiencia')">Experiência</a>
+        <a @click="navigateTo('/skils')">Skils</a>
+        <a @click="navigateTo('/projetos')">Projetos</a>
+        <a @click="navigateTo('/contato')">Contato</a>
       </div>
     </div>
   </template>
 
 
 <script>
+import { ref } from 'vue';
+const showOptions = ref(false);
 
 export default {
     name: "NavBar"
+}
+
+function toggleOptions() {
+  showOptions.value = !showOptions.value;
+}
+
+function navigateTo(route) {
+  // Use the Vue Router to navigate to the specified route
+  // Make sure you have access to the router instance in this file
+  // For demonstration purposes, I'll assume you've imported the router instance as "router"
+  router.push(route);
 }
 
 </script>
@@ -118,6 +129,7 @@ export default {
   #nav .options.active {
     display: flex;
     align-items: center;
+    background-color: #15132b;
   }
 
   #nav .options a {

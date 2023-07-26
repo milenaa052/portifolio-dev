@@ -1,6 +1,7 @@
 <template>
     <section>
-      <h1>Projetos</h1>
+      <body>
+        <h1>Projetos</h1>
   
       <div class="card-container">
         <div v-for="(card, index) in getCurrentPageCards" :key="index" class="card">
@@ -32,6 +33,7 @@
         :per-page="perPage"
         aria-controls="card-container"
       ></b-pagination>
+      </body>
     </section>
   </template>
   
@@ -87,8 +89,8 @@
   };
   </script>
   
-  <style scoped>
- section {
+<style scoped>
+ section, body {
     background-color: #15132b;
 }
 
@@ -162,8 +164,10 @@ h1{
 ul.pagination.b-pagination{
  color: #8d60db;
  justify-content: center;
- padding-bottom: 30px;
+ padding-bottom: 20px;
 }
+
+
 
 @media screen and (max-width: 760px){
  .linguagens{
@@ -189,6 +193,10 @@ ul.pagination.b-pagination{
 
   div.card-body{
     height: 620px;
+  }
+
+  ul.pagination.b-pagination{
+    padding-bottom: 5px;
   }
 }
 </style> 

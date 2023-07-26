@@ -36,7 +36,7 @@
 
         <div class="d-flex">
           <b-button variant="outline-light" class="ml-auto">
-            <b-img src="../static/seta.png"></b-img>
+            <b-img class="seta" src="../static/seta.png"></b-img>
           </b-button>
         </div>
     </section>
@@ -106,6 +106,26 @@ img {
     border-color: #8d60db;
 }
 
+.d-flex.justify-content-center {
+  margin-top: 30px;
+}
+
+.b-button {
+  width: 60px;
+  height: 60px;
+}
+
+.btn-outline-light{
+  border: 2px solid transparent;
+}
+
+.seta {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+
 @media screen and (max-width: 760px){
   .wrapper {
     grid-template-columns: 1fr;
@@ -130,6 +150,10 @@ img {
 
   .wrapper .titulo, .wrapper img, .wrapper .descricao {
     order: 1; 
+  }
+
+  .download{
+    margin: 0 0 5px 20px;
   }
 }
 
