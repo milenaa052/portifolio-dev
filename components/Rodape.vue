@@ -33,4 +33,10 @@ section {
     gap: 70px;
     padding-top: 20px;
 }
+
+@media (max-width: 768px) {
+  .logos {
+    gap: 30px;
+  }
+}
 </style>

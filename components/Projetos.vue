@@ -19,7 +19,7 @@
               {{ card.content }}
             </b-card-text>
 
-           <!-- <b-img :src="card.image" :alt="card.title" class="card-image" :key="currentPage"></b-img>-->
+           <b-img :src="card.image" :alt="card.title" class="card-image" :key="currentPage"></b-img>
   
             <b-button class="repositorio">Visualizar repositório</b-button>
           </b-card>
@@ -40,7 +40,7 @@
     name: "Projetos",
     data() {
       return {
-        perPage: 1,
+        perPage: 2,
         currentPage: 1,
         cards: [
           {
@@ -48,25 +48,28 @@
             languages: ["Linguagem 1", "Linguagem 2", "Linguagem 3"],
             description: "Descrição do Card 1",
             content: "Conteúdo do Card 1",
-          //  image: require("../static/img.jpeg"),
+            image: require("../static/img.jpeg"),
           },
           {
             title: "Card 2",
             languages: ["Linguagem 4", "Linguagem 5", "Linguagem 6"],
             description: "Descrição do Card 2",
-            content: "Conteúdo do Card 2"
+            content: "Conteúdo do Card 2",
+            image: require("../static/img.jpeg")
           },
           {
             title: "Card 3",
             languages: ["Linguagem 7", "Linguagem 8", "Linguagem 9"],
             description: "Descrição do Card 3",
-            content: "Conteúdo do Card 3"
+            content: "Conteúdo do Card 3",
+            image: require("../static/img.jpeg")
           },
           {
             title: "Card 4",
             languages: ["Linguagem 10", "Linguagem 11", "Linguagem 12"],
             description: "Descrição do Card 4",
-            content: "Conteúdo do Card 4"
+            content: "Conteúdo do Card 4",
+            image: require("../static/img.jpeg")
           },
         ],
       };
@@ -104,7 +107,7 @@ h1{
   padding-bottom: 70px;
 }
 .card {
-  width: 620px;
+  width: 100%;
   height: 620px;
   background-color: #15132b;
   color: white;
@@ -159,6 +162,33 @@ h1{
 ul.pagination.b-pagination{
  color: #8d60db;
  justify-content: center;
- padding-bottom: 50px;
+ padding-bottom: 30px;
+}
+
+@media screen and (max-width: 760px){
+ .linguagens{
+    display: block;
+    text-align: center;
+ }
+}
+
+@media screen and (max-width: 1023px) {
+  .card-container {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
+  .card {
+    width: 100%;
+   
+    margin-right: 0;
+    margin-bottom: 80px;
+  }
+
+  div.card-body{
+    height: 620px;
+  }
 }
 </style> 
