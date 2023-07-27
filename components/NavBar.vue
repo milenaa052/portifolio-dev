@@ -52,9 +52,6 @@ function navigateTo(route) {
 
 <style scoped>
 #nav{
-    background-image: linear-gradient(to right, #081314, #09222d);
-    background-size: cover;
-    background-position: bottom;
     padding-top: 2.5%;
 }
 

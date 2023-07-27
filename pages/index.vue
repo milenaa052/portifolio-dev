@@ -1,11 +1,7 @@
 <template>
   <div>
     <section>
-      <NavBar />
-    </section>
-
-    <section>
-        <Banner />
+      <Principal />
     </section>
 
     <section>
@@ -40,8 +36,7 @@
 </template>
 
 <script>
-import NavBar from "../components/NavBar.vue"
-import Banner from "../components/Banner.vue"
+import Principal from "../components/Principal.vue"
 import Sobre from "../components/Sobre.vue"
 import Formacao from "../components/Formacao.vue"
 import Certificados from "../components/Certificados.vue"
@@ -53,8 +48,7 @@ import Rodape from "../components/Rodape.vue"
 export default {
   name: "Home",
   components: {
-        NavBar,
-        Banner,
+        Principal,
         Sobre,
         Formacao,
         Certificados,
@@ -64,5 +58,4 @@ export default {
         Rodape
   }
 }
-
 </script>

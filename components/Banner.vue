@@ -22,11 +22,9 @@ export default {
 <style scoped>
 
 #main-banner {
-    background-image: url('../static/banner.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 700px;
     display: flex;
     justify-content: flex-start;
 }

@@ -97,7 +97,7 @@ p {
   object-fit: contain;
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1024px){
   #container {
   display: flex;
   flex-direction: row;
