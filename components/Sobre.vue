@@ -82,6 +82,13 @@ p {
   font-size: 20px;
 }
 
+.d-flex {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+
 .d-flex.justify-content-center {
   margin-top: 30px;
 }
@@ -95,6 +102,16 @@ p {
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+
+.btn-outline-light{
+  border: 2px solid transparent;
+}
+
+@media screen and (min-width: 767px){
+  #img{
+    margin-left: 90px;
+  }
 }
 
 @media screen and (min-width: 1024px){

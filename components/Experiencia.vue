@@ -33,12 +33,6 @@
         <div class="buttom-cv">
             <b-button class="download">Download CV</b-button>
         </div>
-
-        <div class="d-flex">
-          <b-button variant="outline-light" class="ml-auto">
-            <b-img class="seta" src="../static/seta.png"></b-img>
-          </b-button>
-        </div>
     </section>
 </template>
 
@@ -104,25 +98,6 @@ img {
 .download:hover{
     background-color: #241c45;
     border-color: #8d60db;
-}
-
-.d-flex.justify-content-center {
-  margin-top: 30px;
-}
-
-.b-button {
-  width: 60px;
-  height: 60px;
-}
-
-.btn-outline-light{
-  border: 2px solid transparent;
-}
-
-.seta {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
 }
 
 

@@ -1,6 +1,6 @@
 <template>
     <section>
-      <body>
+      <div class="projetos">
         <h1>Projetos</h1>
   
       <div class="card-container">
@@ -33,7 +33,7 @@
         :per-page="perPage"
         aria-controls="card-container"
       ></b-pagination>
-      </body>
+    </div>
     </section>
   </template>
   
@@ -90,7 +90,7 @@
   </script>
   
 <style scoped>
- section, body {
+ .projetos {
     background-color: #15132b;
 }
 
@@ -106,7 +106,7 @@ h1{
   justify-content: flex-start;
   margin-left: 100px;
   margin-top: 40px;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 }
 .card {
   width: 100%;
@@ -164,7 +164,7 @@ h1{
 ul.pagination.b-pagination{
  color: #8d60db;
  justify-content: center;
- padding-bottom: 20px;
+ padding-top: 20px;
 }
 
 
@@ -182,6 +182,7 @@ ul.pagination.b-pagination{
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 15px;
+    padding-bottom: 0px;
   }
 
   .card {

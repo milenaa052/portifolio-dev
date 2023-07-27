@@ -41,12 +41,6 @@
           </p>
         </div>
       </div>
-  
-      <div class="d-flex">
-        <b-button variant="outline-light" class="ml-auto">
-          <b-img src="../static/seta.png"></b-img>
-        </b-button>
-      </div>
     </section>
   </template>
   

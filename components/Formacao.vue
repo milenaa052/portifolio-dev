@@ -28,12 +28,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. Pellentesque non vulputate ipsum. Donec interdum ante ante, tempor dictum orci tempor sed. Curabitur sit amet lectus vel eros</p>
           </div>
       </div>
-  
-        <div class="d-flex">
-          <b-button variant="outline-light" class="ml-auto">
-            <b-img class="seta" src="../static/seta.png"></b-img>
-          </b-button>
-        </div>
     </section>
   </template>
 
@@ -86,25 +80,6 @@ img {
     margin-left: auto;
     margin-right: 10%;
     align-items: center;
-}
-
-.d-flex.justify-content-center {
-  margin-top: 30px;
-}
-
-.b-button {
-  width: 60px;
-  height: 60px;
-}
-
-.btn-outline-light{
-  border: 2px solid transparent;
-}
-
-.seta {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
 }
 
 

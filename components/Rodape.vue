@@ -6,12 +6,6 @@
             <b-img src="../static/github.png" alt="github"></b-img>
             <b-img src="../static/whatsapp.png" alt="whatsapp"></b-img>
         </div>
-
-        <div class="d-flex">
-          <b-button variant="outline-light" class="ml-auto">
-            <b-img class="seta" src="../static/seta.png"></b-img>
-          </b-button>
-        </div>
     </section>
 </template>
 
@@ -25,6 +19,7 @@ export default {
 
 section {
     background-color: #15132b;
+    margin-top: -18px;
 }
 
 .logos {
@@ -32,25 +27,6 @@ section {
     justify-content: center;
     gap: 70px;
     padding-top: 20px;
-}
-
-.d-flex.justify-content-center {
-  margin-top: 30px;
-}
-
-.b-button {
-  width: 40px;
-  height: 40px;
-}
-
-.btn-outline-light{
-  border: 2px solid transparent;
-}
-
-.seta {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
 }
 
 @media (max-width: 768px) {

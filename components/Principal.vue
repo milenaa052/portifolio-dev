@@ -1,14 +1,10 @@
 <template>
-  <body>
-    <div id="app">
-      <div id="main-container">
-        <NavBar />
-        <Banner />
-        <router-view></router-view>
-      </div>
-    </div>
-  </body>
-  </template>
+  <div id="main-container">
+    <NavBar />
+    <Banner />
+    <router-view></router-view>
+  </div>
+</template>
   
   <script>
   import NavBar from "./NavBar.vue";

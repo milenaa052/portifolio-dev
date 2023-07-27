@@ -7,25 +7,29 @@ function toggleOptions() {
 </script>
 
 <template>
-    <div id="nav">
-      <div class="toggle-icon" @click="toggleOptions">
-        <span class="line" :class="{ active: showOptions }"></span>
-        <span class="line" :class="{ active: showOptions }"></span>
-        <span class="line" :class="{ active: showOptions }"></span>
+  <div class="nav-container">
+      <div id="nav">
+        <div class="toggle-icon" @click="toggleOptions">
+          <span class="line" :class="{ active: showOptions }"></span>
+          <span class="line" :class="{ active: showOptions }"></span>
+          <span class="line" :class="{ active: showOptions }"></span>
+        </div>
+
+        <button class="close-button" v-if="showOptions" @click="toggleOptions">X</button>
+    
+        <div class="options" :class="{ active: showOptions }">
+          <a @click="navigateTo('/')">Inicio</a>
+          <a @click="navigateTo('/about')">Sobre</a>
+          <a @click="navigateTo('/formacao')">Formação</a>
+          <a @click="navigateTo('/certificados')">Certificados</a>
+          <a @click="navigateTo('/experiencia')">Experiência</a>
+          <a @click="navigateTo('/skils')">Skils</a>
+          <a @click="navigateTo('/projetos')">Projetos</a>
+          <a @click="navigateTo('/contato')">Contato</a>
+        </div>
       </div>
-  
-      <div class="options" :class="{ active: showOptions }">
-        <a @click="navigateTo('/')">Inicio</a>
-        <a @click="navigateTo('/about')">Sobre</a>
-        <a @click="navigateTo('/formacao')">Formação</a>
-        <a @click="navigateTo('/certificados')">Certificados</a>
-        <a @click="navigateTo('/experiencia')">Experiência</a>
-        <a @click="navigateTo('/skils')">Skils</a>
-        <a @click="navigateTo('/projetos')">Projetos</a>
-        <a @click="navigateTo('/contato')">Contato</a>
-      </div>
-    </div>
-  </template>
+  </div>
+</template>
 
 
 <script>
@@ -33,8 +37,8 @@ import { ref } from 'vue';
 const showOptions = ref(false);
 
 export default {
-    name: "NavBar"
-}
+  name: "NavBar",
+};
 
 function toggleOptions() {
   showOptions.value = !showOptions.value;
@@ -44,13 +48,15 @@ function navigateTo(route) {
   // Use the Vue Router to navigate to the specified route
   // Make sure you have access to the router instance in this file
   // For demonstration purposes, I'll assume you've imported the router instance as "router"
-  router.push(route);
+  // router.push(route);
 }
-
 </script>
 
-
 <style scoped>
+.nav-container {
+  position: relative;
+}
+
 #nav{
     padding-top: 2.5%;
 }
@@ -65,6 +71,7 @@ function navigateTo(route) {
 
 #nav a:hover{
     color: #8d60db;
+    cursor: pointer;
 }
 
 #nav .toggle-icon {
@@ -106,9 +113,28 @@ function navigateTo(route) {
   color: #8d60db;
 }
 
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 3;
+}
 
+.close-button:hover {
+  color: #8d60db;
+}
 
 @media (max-width: 767px) {
+
+  #nav {
+    position: relative;
+    z-index: 1;
+  }
   #nav .toggle-icon {
     display: flex;
   }
@@ -116,11 +142,12 @@ function navigateTo(route) {
   #nav .options {
     flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 10px 0;
     display: none;
+    z-index: 2;
   }
 
   #nav .options.active {
