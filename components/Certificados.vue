@@ -19,7 +19,7 @@
             <h1>Hello world!</h1>
         </b-carousel-slide>
 
-        <b-carousel-slide img-src="test3.jpeg" class="custom-carousel-slide">
+        <b-carousel-slide img-src="banner.jpeg" class="custom-carousel-slide">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
             a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
@@ -32,24 +32,23 @@
 
 <script>
 export default {
-    name: "Certificados",
-    data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
-    },
-    methods: {
-      onSlideStart(slide) {
-        this.sliding = true
-      },
-      onSlideEnd(slide) {
-        this.sliding = false
-      }
+  name: "Certificados",
+  data() {
+    return {
+      slide: 0,
+      sliding: null
     }
+  },
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
+    }
+  }
 }
 </script>
-
 
 <style scoped>
 section {

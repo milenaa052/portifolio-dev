@@ -10,8 +10,8 @@ const router = createRouter({
       component: Inicio
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/sobre',
+      name: 'sobre',
       component: () => import('../components/Sobre.vue')
     },
     {
@@ -42,4 +42,4 @@ const router = createRouter({
   ]
 })
 
-export default router
+export default router;

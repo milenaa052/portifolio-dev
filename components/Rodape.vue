@@ -16,7 +16,6 @@ export default {
 </script>
 
 <style scoped>
-
 section {
     background-color: #15132b;
     margin-top: -18px;

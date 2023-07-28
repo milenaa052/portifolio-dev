@@ -48,14 +48,14 @@ import Rodape from "../components/Rodape.vue"
 export default {
   name: "Home",
   components: {
-        Principal,
-        Sobre,
-        Formacao,
-        Certificados,
-        Experiencia,
-        Skils,
-        Projetos,
-        Rodape
+    Principal,
+    Sobre,
+    Formacao,
+    Certificados,
+    Experiencia,
+    Skils,
+    Projetos,
+    Rodape
   }
 }
 </script>

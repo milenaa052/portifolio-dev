@@ -1,93 +1,93 @@
 <template>
-    <section>
-      <div class="projetos">
-        <h1>Projetos</h1>
+  <section>
+    <div class="projetos">
+      <h1>Projetos</h1>
+
+      <div class="card-container">
+        <div v-for="(card, index) in getCurrentPageCards" :key="index" class="card">
+          <b-card :title="card.title">
+            <div class="linguagens">
+              <b-card-text v-for="(language, i) in card.languages" :key="i" class="botao">
+                {{ language }}
+              </b-card-text>
+            </div>
   
-        <div class="card-container">
-          <div v-for="(card, index) in getCurrentPageCards" :key="index" class="card">
-            <b-card :title="card.title">
-              <div class="linguagens">
-                <b-card-text v-for="(language, i) in card.languages" :key="i" class="botao">
-                  {{ language }}
-                </b-card-text>
-              </div>
-    
-              <b-card-text class="descricao">
-                {{ card.description }}
-              </b-card-text>
-    
-              <b-card-text>
-                {{ card.content }}
-              </b-card-text>
+            <b-card-text class="descricao">
+              {{ card.description }}
+            </b-card-text>
+  
+            <b-card-text>
+              {{ card.content }}
+            </b-card-text>
 
-            <b-img :src="card.image" :alt="card.title" class="card-image" :key="currentPage"></b-img>
-    
-              <b-button class="repositorio">Visualizar repositório</b-button>
-            </b-card>
-          </div>
+          <b-img :src="card.image" :alt="card.title" class="card-image" :key="currentPage"></b-img>
+  
+            <b-button class="repositorio">Visualizar repositório</b-button>
+          </b-card>
         </div>
-
-        <b-pagination
-          v-model="currentPage"
-          :total-rows="totalCards"
-          :per-page="perPage"
-          aria-controls="card-container"
-        ></b-pagination>
       </div>
-    </section>
+
+      <b-pagination
+        v-model="currentPage"
+        :total-rows="totalCards"
+        :per-page="perPage"
+        aria-controls="card-container"
+      ></b-pagination>
+    </div>
+  </section>
 </template>
   
-  <script>
-  export default {
-    name: "Projetos",
-    data() {
-      return {
-        perPage: 2,
-        currentPage: 1,
-        cards: [
-          {
-            title: "Card 1",
-            languages: ["Linguagem 1", "Linguagem 2", "Linguagem 3"],
-            description: "Descrição do Card 1",
-            content: "Conteúdo do Card 1",
-            image: require("../static/img.jpeg"),
-          },
-          {
-            title: "Card 2",
-            languages: ["Linguagem 4", "Linguagem 5", "Linguagem 6"],
-            description: "Descrição do Card 2",
-            content: "Conteúdo do Card 2",
-            image: require("../static/img.jpeg")
-          },
-          {
-            title: "Card 3",
-            languages: ["Linguagem 7", "Linguagem 8", "Linguagem 9"],
-            description: "Descrição do Card 3",
-            content: "Conteúdo do Card 3",
-            image: require("../static/img.jpeg")
-          },
-          {
-            title: "Card 4",
-            languages: ["Linguagem 10", "Linguagem 11", "Linguagem 12"],
-            description: "Descrição do Card 4",
-            content: "Conteúdo do Card 4",
-            image: require("../static/img.jpeg")
-          },
-        ],
-      };
+<script>
+export default {
+  name: "Projetos",
+  data() {
+    return {
+      perPage: 2,
+      currentPage: 1,
+      cards: [
+        {
+          title: "Card 1",
+          languages: ["Linguagem 1", "Linguagem 2", "Linguagem 3"],
+          description: "Descrição do Card 1",
+          content: "Conteúdo do Card 1",
+          image: require("../static/img.jpeg"),
+        },
+        {
+          title: "Card 2",
+          languages: ["Linguagem 4", "Linguagem 5", "Linguagem 6"],
+          description: "Descrição do Card 2",
+          content: "Conteúdo do Card 2",
+          image: require("../static/img.jpeg")
+        },
+        {
+          title: "Card 3",
+          languages: ["Linguagem 7", "Linguagem 8", "Linguagem 9"],
+          description: "Descrição do Card 3",
+          content: "Conteúdo do Card 3",
+          image: require("../static/img.jpeg")
+        },
+        {
+          title: "Card 4",
+          languages: ["Linguagem 10", "Linguagem 11", "Linguagem 12"],
+          description: "Descrição do Card 4",
+          content: "Conteúdo do Card 4",
+          image: require("../static/img.jpeg")
+        },
+      ],
+    };
+  },
+  computed: {
+    totalCards() {
+      return this.cards.length;
     },
-    computed: {
-      totalCards() {
-        return this.cards.length;
-      },
-      getCurrentPageCards() {
-        const startIndex = (this.currentPage - 1) * this.perPage;
-        const endIndex = startIndex + this.perPage;
-        return this.cards.slice(startIndex, endIndex);
-      },
+    getCurrentPageCards() {
+      const startIndex = (this.currentPage - 1) * this.perPage;
+      const endIndex = startIndex + this.perPage;
+      return this.cards.slice(startIndex, endIndex);
     },
-  };
-  </script>
+  },
+};
+</script>
   
 <style scoped>
  .projetos {
@@ -95,10 +95,10 @@
 }
 
 h1{
-    color: #8d60db;
-    text-align: center;
-    font-size: 50px;
-    padding-top: 5%;
+  color: #8d60db;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5%;
 }
 
 .card-container {
@@ -108,6 +108,7 @@ h1{
   margin-top: 40px;
   padding-bottom: 30px;
 }
+
 .card {
   width: 100%;
   height: 620px;
@@ -121,7 +122,7 @@ h1{
 }
 
 .linguagens{
-    display: flex;
+  display: flex;
   justify-content: flex-start;
 }
 
@@ -129,16 +130,17 @@ h1{
   margin-bottom: auto;
 }
 .botao{
-    background-color: #8d60db;
-    border-radius: 2px;
-    padding: 5px;
-    margin-right: 20px;
+  background-color: #8d60db;
+  border-radius: 2px;
+  padding: 5px;
+  margin-right: 20px;
 }
 
 .descricao{
-    color:#677484;
-    font-size: 20px;
+  color:#677484;
+  font-size: 20px;
 }
+
 .card-image {
   width: 80%;
   height: auto;
@@ -148,17 +150,18 @@ h1{
   justify-content: center;
   align-items: center;
 }
+
 .repositorio{
   background-color: #8d60db;
   height: 50px;
   position: absolute;
   margin: 20px 0;
   margin-bottom: 30px;
-
 }
+
 .repositorio:hover{
-    background-color: #241c45;
-    border-color: #8d60db;
+  background-color: #241c45;
+  border-color: #8d60db;
 }
 
 ul.pagination.b-pagination{
@@ -167,12 +170,10 @@ ul.pagination.b-pagination{
  padding-top: 20px;
 }
 
-
-
 @media screen and (max-width: 760px){
  .linguagens{
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
  }
 }
 
@@ -187,11 +188,9 @@ ul.pagination.b-pagination{
 
   .card {
     width: 100%;
-   
     margin-right: 0;
     margin-bottom: 80px;
   }
-
   div.card-body{
     height: 620px;
   }

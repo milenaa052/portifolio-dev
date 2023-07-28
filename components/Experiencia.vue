@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div id="div-h1">
+        <div class="div-h1">
             <h1>Experiência</h1>
         </div>
 
@@ -43,13 +43,12 @@ export default {
 </script>
 
 <style scoped>
-
 section {
     background-color: #15132b;
     color: white;
 }
 
-#div-h1 {
+.div-h1 {
     display: block;
     margin: auto;
 }
@@ -98,7 +97,6 @@ img {
     border-color: #8d60db;
 }
 
-
 @media screen and (max-width: 760px){
   .wrapper {
     grid-template-columns: 1fr;
@@ -119,7 +117,6 @@ img {
     text-align: center;
     margin-top: 70px;
   }
-
 
   .wrapper .titulo, .wrapper img, .wrapper .descricao {
     order: 1; 

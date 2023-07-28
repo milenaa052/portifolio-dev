@@ -31,7 +31,6 @@ function toggleOptions() {
   </div>
 </template>
 
-
 <script>
 import { ref } from 'vue';
 const showOptions = ref(false);
@@ -58,20 +57,20 @@ function navigateTo(route) {
 }
 
 #nav{
-    padding-top: 2.5%;
+  padding-top: 2.5%;
 }
 
 #nav a{
-    text-decoration: none;
-    color: white;
-   padding-right: 3%;
-   font-size: 120%;
-   transition: 0.5s;
+  text-decoration: none;
+  color: white;
+  padding-right: 3%;
+  font-size: 120%;
+  transition: 0.5s;
 }
 
 #nav a:hover{
-    color: #8d60db;
-    cursor: pointer;
+  color: #8d60db;
+  cursor: pointer;
 }
 
 #nav .toggle-icon {
@@ -106,7 +105,6 @@ function navigateTo(route) {
   color: white;
   font-size: 120%;
   transition: 0.5s;
-  
 }
 
 #nav .options a:hover {
