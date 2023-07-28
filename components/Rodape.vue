@@ -27,6 +27,7 @@ section {
     justify-content: center;
     gap: 70px;
     padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 @media (max-width: 768px) {

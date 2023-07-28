@@ -27,7 +27,7 @@
 
         <div class="d-flex">
           <b-button variant="outline-light" class="ml-auto">
-            <b-img src="../static/seta.png"></b-img>
+            <b-img class="seta" src="../static/seta.png"></b-img>
           </b-button>
         </div>
     </section>
@@ -98,14 +98,15 @@ p {
   height: 40px;
 }
 
-.b-img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
 .btn-outline-light{
   border: 2px solid transparent;
+}
+
+
+@media screen and (max-width: 768px){
+  .seta {
+    width: 60px;
+  }
 }
 
 @media screen and (min-width: 767px){

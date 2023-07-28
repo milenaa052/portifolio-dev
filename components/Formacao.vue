@@ -64,8 +64,6 @@ h1 {
 
 .titulo{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
 }
 
@@ -111,7 +109,7 @@ img {
 
 @media screen and (min-width: 768px){
   .titulo{
-    margin-left: 20px;
+    margin-left: 60px;
   }
 }
 </style>

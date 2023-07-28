@@ -71,8 +71,6 @@ h1{
 
 .titulo{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
 }
 
@@ -128,13 +126,13 @@ img {
   }
 
   .download{
-    margin: 0 0 5px 20px;
+    margin: 0 0 25px 20px;
   }
 }
 
 @media screen and (min-width: 768px){
   .titulo{
-    margin-left: 20px;
+    margin-left: 60px;
   }
 }
 </style>

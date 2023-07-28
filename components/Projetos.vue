@@ -3,39 +3,39 @@
       <div class="projetos">
         <h1>Projetos</h1>
   
-      <div class="card-container">
-        <div v-for="(card, index) in getCurrentPageCards" :key="index" class="card">
-          <b-card :title="card.title">
-            <div class="linguagens">
-              <b-card-text v-for="(language, i) in card.languages" :key="i" class="botao">
-                {{ language }}
+        <div class="card-container">
+          <div v-for="(card, index) in getCurrentPageCards" :key="index" class="card">
+            <b-card :title="card.title">
+              <div class="linguagens">
+                <b-card-text v-for="(language, i) in card.languages" :key="i" class="botao">
+                  {{ language }}
+                </b-card-text>
+              </div>
+    
+              <b-card-text class="descricao">
+                {{ card.description }}
               </b-card-text>
-            </div>
-  
-            <b-card-text class="descricao">
-              {{ card.description }}
-            </b-card-text>
-  
-            <b-card-text>
-              {{ card.content }}
-            </b-card-text>
+    
+              <b-card-text>
+                {{ card.content }}
+              </b-card-text>
 
-           <b-img :src="card.image" :alt="card.title" class="card-image" :key="currentPage"></b-img>
-  
-            <b-button class="repositorio">Visualizar repositório</b-button>
-          </b-card>
+            <b-img :src="card.image" :alt="card.title" class="card-image" :key="currentPage"></b-img>
+    
+              <b-button class="repositorio">Visualizar repositório</b-button>
+            </b-card>
+          </div>
         </div>
-      </div>
 
-      <b-pagination
-        v-model="currentPage"
-        :total-rows="totalCards"
-        :per-page="perPage"
-        aria-controls="card-container"
-      ></b-pagination>
-    </div>
+        <b-pagination
+          v-model="currentPage"
+          :total-rows="totalCards"
+          :per-page="perPage"
+          aria-controls="card-container"
+        ></b-pagination>
+      </div>
     </section>
-  </template>
+</template>
   
   <script>
   export default {
@@ -197,7 +197,7 @@ ul.pagination.b-pagination{
   }
 
   ul.pagination.b-pagination{
-    padding-bottom: 5px;
+    padding-bottom: 30px;
   }
 }
 </style> 

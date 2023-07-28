@@ -114,7 +114,7 @@ function navigateTo(route) {
 }
 
 .close-button {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   font-size: 18px;
@@ -122,7 +122,7 @@ function navigateTo(route) {
   background-color: transparent;
   border: none;
   color: white;
-  z-index: 3;
+  z-index: 100;
 }
 
 .close-button:hover {
@@ -133,7 +133,7 @@ function navigateTo(route) {
 
   #nav {
     position: relative;
-    z-index: 1;
+    
   }
   #nav .toggle-icon {
     display: flex;
@@ -141,13 +141,13 @@ function navigateTo(route) {
 
   #nav .options {
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 10px 0;
     display: none;
-    z-index: 2;
+    z-index: 50;
   }
 
   #nav .options.active {

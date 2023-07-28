@@ -78,6 +78,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     align-items: flex-start;
+    padding-bottom: 200px;
   }
   
   .barras {
@@ -99,6 +100,7 @@
   @media (max-width: 768px) {
     .skils {
       grid-template-columns: 1fr;
+      padding-bottom: 80px;
     }
   
     .barras,
