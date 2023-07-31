@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="index">
     <section>
       <Principal />
     </section>
@@ -46,7 +46,7 @@ import Projetos from "../components/Projetos.vue"
 import Rodape from "../components/Rodape.vue"
 
 export default {
-  name: "Home",
+  name: "Index",
   components: {
     Principal,
     Sobre,

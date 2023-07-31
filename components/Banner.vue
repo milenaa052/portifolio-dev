@@ -5,8 +5,6 @@
       <p class="texto2">Milena Santos de Oliveira</p>
 
       <p class="texto3">Eu sou</p>
-
-      <p class="texto4">Desenvolvedora Júnior</p>
   </div>
 </template>
 
@@ -14,6 +12,13 @@
 export default {
   name: "Banner"
 };
+
+/*var typed = new Typed('.typing', {
+    strings: ['Desenvolvedor Front-end', 'Desenvolvedor Backend'],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+  });*/
 </script>
 
 <style scoped>
