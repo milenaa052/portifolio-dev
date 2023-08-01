@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="projetos">
     <div class="projetos">
       <h1>Projetos</h1>
 
@@ -12,7 +12,7 @@
               </b-card-text>
             </div>
   
-            <b-card-text class="descricao">
+            <b-card-text class="texto-descricao">
               {{ card.description }}
             </b-card-text>
   
@@ -89,9 +89,9 @@ export default {
 };
 </script>
   
-<style scoped>
- .projetos {
-    background-color: #15132b;
+<style>
+.projetos {
+  background-color: #15132b;
 }
 
 h1{
@@ -129,6 +129,7 @@ h1{
 .linguagens .card-text:last-child {
   margin-bottom: auto;
 }
+
 .botao{
   background-color: #8d60db;
   border-radius: 2px;
@@ -136,7 +137,7 @@ h1{
   margin-right: 20px;
 }
 
-.descricao{
+.texto-descricao{
   color:#677484;
   font-size: 20px;
 }
@@ -165,9 +166,23 @@ h1{
 }
 
 ul.pagination.b-pagination{
- color: #8d60db;
  justify-content: center;
  padding-top: 20px;
+ padding-bottom: 20px;
+}
+
+button.page-link, span.page-link {
+  background-color: #8d60db !important;
+  color: #fff !important;
+}
+
+li.page-item.active button.page-link {
+  background-color: #241c45 !important;
+  border-color: #8d60db !important;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(153, 0, 255, 0.43);
 }
 
 @media screen and (max-width: 760px){

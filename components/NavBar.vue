@@ -1,13 +1,26 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+const isScrolled = ref(false);
 
 function toggleOptions() {
   showOptions.value = !showOptions.value;
 }
+
+function handleScroll() {
+  isScrolled.value = window.scrollY > 0;
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
-  <div class="nav-container">
+  <div class="nav-container" :class="{ scrolled: isScrolled }">
       <div id="nav">
         <div class="toggle-icon" @click="toggleOptions">
           <span class="line" :class="{ active: showOptions }"></span>
@@ -18,14 +31,14 @@ function toggleOptions() {
         <button class="close-button" v-if="showOptions" @click="toggleOptions">X</button>
     
         <div class="options" :class="{ active: showOptions }">
-          <a @click="navigateTo('/')">Inicio</a>
-          <a @click="navigateTo('/about')">Sobre</a>
-          <a @click="navigateTo('/formacao')">Formação</a>
-          <a @click="navigateTo('/certificados')">Certificados</a>
-          <a @click="navigateTo('/experiencia')">Experiência</a>
-          <a @click="navigateTo('/skils')">Skils</a>
-          <a @click="navigateTo('/projetos')">Projetos</a>
-          <a @click="navigateTo('/contato')">Contato</a>
+          <a href="#">Inicio</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#formacao">Formação</a>
+          <a href="#certificados">Certificados</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#skils">Skils</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
         </div>
       </div>
   </div>
@@ -42,18 +55,19 @@ export default {
 function toggleOptions() {
   showOptions.value = !showOptions.value;
 }
-
-function navigateTo(route) {
-  // Use the Vue Router to navigate to the specified route
-  // Make sure you have access to the router instance in this file
-  // For demonstration purposes, I'll assume you've imported the router instance as "router"
-  // router.push(route);
-}
 </script>
 
 <style scoped>
 .nav-container {
-  position: relative;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+}
+
+.nav-container.scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 10px;
+  padding-left: 100%;
 }
 
 #nav{
@@ -97,7 +111,7 @@ function navigateTo(route) {
 
 #nav .options {
   display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
 }
 
 #nav .options a {
@@ -105,6 +119,7 @@ function navigateTo(route) {
   color: white;
   font-size: 120%;
   transition: 0.5s;
+  padding: 0 20px;
 }
 
 #nav .options a:hover {

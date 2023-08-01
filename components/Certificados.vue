@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="certificados">
     <h1>Certificados</h1>
     <hr>
 
@@ -59,7 +59,8 @@ h1 {
   color: #8d60db;
   text-align: center;
   font-size: 50px;
-  margin-top: 3%;
+  margin-top: 2%;
+  padding-top: 4%;
 }
 
 hr {
@@ -78,6 +79,6 @@ hr {
 .custom-carousel-slide {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  padding-bottom: 150px;
 }
 </style>

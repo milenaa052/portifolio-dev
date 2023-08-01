@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="contato">
         <div class="logos">
             <a href="https://www.linkedin.com/in/milena-santos-de-oliveira-709816192/">
                 <b-img src="../static/linkedin.png" alt="linkedin"></b-img>

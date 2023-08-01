@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="sobre">
     <h1>Sobre mim</h1>
     <hr>
 
@@ -51,7 +51,8 @@ h1 {
   color: #8d60db;
   text-align: center;
   font-size: 50px;
-  margin-top: 3%;
+  margin-top: 2%;
+  padding-top: 4%;
 }
 
 hr {
