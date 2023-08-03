@@ -31,14 +31,14 @@ onUnmounted(() => {
         <button class="close-button" v-if="showOptions" @click="toggleOptions">X</button>
     
         <div class="options" :class="{ active: showOptions }">
-          <a href="#">Inicio</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#formacao">Formação</a>
-          <a href="#certificados">Certificados</a>
-          <a href="#experiencia">Experiência</a>
-          <a href="#skils">Skils</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#contato">Contato</a>
+          <a href="#" @click="closeNavOnSmallScreen">Inicio</a>
+          <a href="#sobre" @click="closeNavOnSmallScreen">Sobre</a>
+          <a href="#formacao" @click="closeNavOnSmallScreen">Formação</a>
+          <a href="#certificados" @click="closeNavOnSmallScreen">Certificados</a>
+          <a href="#experiencia" @click="closeNavOnSmallScreen">Experiência</a>
+          <a href="#skils" @click="closeNavOnSmallScreen">Skils</a>
+          <a href="#projetos" @click="closeNavOnSmallScreen">Projetos</a>
+          <a href="#contato" @click="closeNavOnSmallScreen">Contato</a>
         </div>
       </div>
   </div>
@@ -54,6 +54,12 @@ export default {
 
 function toggleOptions() {
   showOptions.value = !showOptions.value;
+}
+
+function closeNavOnSmallScreen() {
+  if (window.innerWidth <= 767) {
+    showOptions.value = false;
+  }
 }
 </script>
 

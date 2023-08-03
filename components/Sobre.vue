@@ -29,7 +29,7 @@
     </div>
 
     <div class="d-flex">
-      <b-button variant="outline-light" class="ml-auto">
+      <b-button v-if="showScrollButton" @click="scrollToTop" variant="outline-light" class="ml-auto">
         <b-img class="seta" src="../static/seta.png"></b-img>
       </b-button>
     </div>
@@ -38,8 +38,33 @@
 
 <script>
 export default {
-    name: "Sobre"
-}
+  name: "Sobre",
+  data() {
+    return {
+      showScrollButton: false,
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const sectionHeight = this.$el.offsetHeight;
+      const scrollPosition = window.scrollY || window.pageYOffset;
+      
+      this.showScrollButton = scrollPosition > sectionHeight;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -97,17 +122,21 @@ p {
   margin-top: 30px;
 }
 
-.b-button {
-  width: 40px;
-  height: 40px;
+.seta{
+  height: 50px;
+  width: 60px;
 }
-
 .btn-outline-light{
-  border: 2px solid transparent;
+  border: 1px solid transparent;
+  background-color: #8d60db;
+  padding: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-outline-light:hover{
-  background-color: transparent;
+  background-color: #241c45;
+  border: 2px #8d60db solid;
 }
 
 @media screen and (max-width: 768px){

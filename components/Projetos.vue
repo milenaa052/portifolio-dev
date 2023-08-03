@@ -187,9 +187,9 @@ li.page-item.active button.page-link {
 
 @media screen and (max-width: 760px){
  .linguagens{
-  display: block;
-  text-align: center;
- }
+    display: block;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -212,6 +212,12 @@ li.page-item.active button.page-link {
 
   ul.pagination.b-pagination{
     padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px){
+  .card-container{
+    margin-left: 35px;
   }
 }
 </style> 

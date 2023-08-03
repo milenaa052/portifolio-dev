@@ -14,6 +14,8 @@
                 <b-img src="../static/whatsapp.png" alt="whatsapp"></b-img>
             </a>
         </div>
+
+        <p class="copyright">© Copyright 2023 - Desenvolvido por <span>Milena Santos de Oliveira</span></p>
     </section>
 </template>
 
@@ -34,7 +36,22 @@ section {
     justify-content: center;
     gap: 70px;
     padding-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+  opacity: 0.4;
+  font-size: 14px;
+  padding-bottom: 50px;
+  margin-bottom: -10px;
+}
+
+.copyright span {
+  color: #8d60db;
+  font-weight: 900;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
