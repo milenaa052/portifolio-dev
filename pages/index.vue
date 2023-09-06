@@ -59,3 +59,16 @@ export default {
   }
 }
 </script>
+
+<style>
+body {
+ width: 100vw;
+ overflow-x: hidden;
+}
+
+@media (max-width: 2560px){
+  body, html {
+    overflow-x: hidden!important;
+  }
+}
+</style>
