@@ -3,51 +3,45 @@
     <h1>Certificados</h1>
     <hr>
 
-    <div class="container">
-      <b-carousel
-        id="carousel-1"
-        v-model="slide"
-        :interval="4000"
-        controls
-        indicators
-        style="text-shadow: 1px 1px 2px #333;"
-        @sliding-start="onSlideStart"
-        @sliding-end="onSlideEnd"
-      >
-
-        <b-carousel-slide img-src="../static/img.jpeg" class="custom-carousel-slide">
-            <h1>Hello world!</h1>
-        </b-carousel-slide>
-
-        <b-carousel-slide img-src="banner.jpeg" class="custom-carousel-slide">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-            a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-          </p>
-        </b-carousel-slide>
-      </b-carousel>
+    <div class="carousel">
+      <button @click="previousImage" :disabled="currentIndex === 0">
+        <b-img src="../static/seta-esquerda.svg" alt="Seta Esquerda"></b-img>
+      </button>
+      <img :src="require(`~/static/${currentImage}`)" :alt="currentImage" />
+      <button @click="nextImage" :disabled="currentIndex === images.length - 1">
+        <b-img src="../static/seta-direita.svg" alt="Seta Direita"></b-img>
+      </button>
+    </div>
+    
+    <div class="controls">
+      <button disabled><strong>{{ currentIndex + 1 }} / {{ images.length }}</strong></button>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "Certificados",
   data() {
     return {
-      slide: 0,
-      sliding: null
+      images: ['img.jpeg', 'banner.jpeg'],
+      currentIndex: 0
+    };
+  },
+  computed: {
+    currentImage() {
+      return this.images[this.currentIndex];
     }
   },
   methods: {
-    onSlideStart(slide) {
-      this.sliding = true
+    nextImage() {
+      this.currentIndex = (this.currentIndex + 1) % this.images.length;
     },
-    onSlideEnd(slide) {
-      this.sliding = false
+
+    previousImage() {
+      this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -69,16 +63,31 @@ hr {
   margin: 3% 8% 5%;
 }
 
-.container {
+.carousel {
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.custom-carousel-slide {
-  width: 100%;
-  height: auto;
-  padding-bottom: 150px;
+button {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.controls button {
+  font-size: 22px;
+  color: #8d60db;
+  margin-top: 10px;
+  background-color: #d6beff;
+  border-radius: 5px;
+  
 }
 </style>

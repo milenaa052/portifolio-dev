@@ -66,6 +66,10 @@ body {
  overflow-x: hidden;
 }
 
+#index {
+  gap: 10px;
+}
+
 @media (max-width: 2560px){
   body, html {
     overflow-x: hidden!important;

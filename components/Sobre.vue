@@ -30,7 +30,7 @@
 
     <div class="d-flex">
       <b-button v-if="showScrollButton" @click="scrollToTop" variant="outline-light" class="ml-auto">
-        <b-img class="seta" src="../static/seta.png"></b-img>
+        <b-img class="seta" src="../static/seta.svg"></b-img>
       </b-button>
     </div>
   </section>

@@ -9,7 +9,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <img src="../static/maleta.png" alt="">
+            <img src="../static/maleta.svg" alt="">
 
             <div class="descricao">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. 
@@ -22,7 +22,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <img src="../static/maleta.png" alt="">
+            <img src="../static/maleta.svg" alt="">
 
             <div class="descricao">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. 
@@ -74,7 +74,6 @@ h1{
 }
 
 img {
-    width: 25%;
     display: block;
     margin: auto;
 }

@@ -16,7 +16,7 @@ export default {
   name: "Banner",
   data(){
     return{
-      text: "Desenvolvedora Front-end.",
+      text: "Desenvolvedora Front-end",
       paper: '',
       timer: null
     }
@@ -25,27 +25,39 @@ export default {
     this.printer()
   },
   methods:{
-    printer(){
-      this.stoper()
-      let i = -1
-        this.timer = setInterval(() =>{
-          i++
-          const x = i%this.text.length
-          this.paper += this.text[x]
-        }, 300-(Math.random()*50))
+    printer() {
+      this.stoper();
+      let i = 0;
+      let isDeleting = false;
+      this.timer = setInterval(() => {
+        if (isDeleting) {
+          this.paper = this.text.substring(0, i);
+          i--;
+
+          if (i < 0) {
+            isDeleting = false;
+            i = 0;
+          }
+        } else {
+          this.paper = this.text.substring(0, i);
+          i++;
+
+          if (i > this.text.length) {
+            isDeleting = true;
+            i = this.text.length;
+            setTimeout(() => {
+              isDeleting = true;
+            }, 1000);
+          }
+        }
+      }, 150);
     },
+
     stoper(){
       clearInterval(this.timer)
       this.paper = ''
     }
   },
-  watch:{
-    paper:function(){
-      if(this.paper.length == this.text.length){
-        this.paper = ''
-      }
-    }
-  }
 };
 </script>
 
@@ -88,10 +100,10 @@ export default {
 
 .main-banner .texto4{
   display: inline;
-  border-right: 2px white solid;
+  border-right: 2px;
   animation: typebar 0.s steps(40) infinite;
-  color: white;
-   font-weight: 500;
+  color: #8d60db;
+  font-weight: bold;
 }
 
 @keyframes typebar{

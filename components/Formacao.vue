@@ -9,7 +9,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
-        <img src="../static/ampulheta.png" alt="ampulheta">
+        <img src="../static/ampulheta.svg" alt="ampulheta">
 
         <div class="descricao">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. Pellentesque non vulputate ipsum. Donec interdum ante ante, tempor dictum orci tempor sed. Curabitur sit amet lectus vel eros</p>
@@ -21,7 +21,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
-        <img src="../static/formacao.png" alt="beca">
+        <img src="../static/formacao.svg" alt="beca">
 
         <div class="descricao">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. Pellentesque non vulputate ipsum. Donec interdum ante ante, tempor dictum orci tempor sed. Curabitur sit amet lectus vel eros</p>
@@ -67,7 +67,6 @@ h1 {
 }
 
 img {
-  width: 25%;
   display: block;
   margin: auto;
 }

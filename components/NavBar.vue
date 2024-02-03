@@ -72,12 +72,12 @@ function closeNavOnSmallScreen() {
 
 .nav-container.scrolled {
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-left: 100%;
 }
 
 #nav{
-  padding-top: 2.5%;
+  padding-top: 1.5%;
 }
 
 #nav a{
