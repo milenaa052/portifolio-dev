@@ -186,6 +186,18 @@ li.page-item.active button.page-link {
 }
 
 @media screen and (max-width: 760px){
+  h1 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .texto-descricao, .botao, .titulo {
+    font-size: 15px;
+  }
+
  .linguagens{
     display: block;
     text-align: center;

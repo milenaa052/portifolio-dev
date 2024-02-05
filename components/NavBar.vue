@@ -99,7 +99,7 @@ function closeNavOnSmallScreen() {
   justify-content: flex-end;
   align-items: end;
   cursor: pointer;
-  padding: 10px;
+  padding: 15px;
 }
 
 #nav .toggle-icon .line {
@@ -179,4 +179,10 @@ function closeNavOnSmallScreen() {
     padding: 5% 10%;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 925px){
+    #nav .options a {
+      font-size: 100%;
+    }
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section id="sobre">
+  <section class="container">
     <h1>Sobre mim</h1>
     <hr>
 
@@ -83,28 +83,17 @@ h1 {
 hr {
   border: none;
   border-top: 2px solid #8d60db;
-  margin: 3% 8% 5%;
-}
-
-.sobre {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding: 40px;
+  margin-bottom: 5%;
 }
 
 .img {
   width: 100%;
   max-width: 500px;
-  height: auto;
-  border-radius: 60%;
+  height: 300px;
+  border-radius: 3%;
   object-fit: cover;
   margin-right: 30px;
   margin-bottom: 30px;
-}
-
-.texto {
-  padding-left: 10px;
 }
 
 p {
@@ -130,7 +119,7 @@ p {
   border: 1px solid transparent;
   background-color: #8d60db;
   padding: 0;
-  margin-right: 10px;
+  margin-right: 16px;
   margin-bottom: 10px;
 }
 
@@ -140,7 +129,27 @@ p {
 }
 
 @media screen and (max-width: 768px){
+
+  h1{
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .img {
+    width: 100%;
+    height: 400px;
+  }
+
   .seta {
+    width: 40px;
+    height: 40px;
+  }
+
+  .d-flex {
+    height: 50px;
     width: 60px;
   }
 }
@@ -165,8 +174,8 @@ p {
   .img {
     width: 100%;
     max-width: 500px;
-    height: auto;
-    border-radius: 60%;
+    height: 500px;
+    border-radius: 3%;
     object-fit: cover;
     margin-left: auto;
   }
@@ -174,7 +183,6 @@ p {
   .texto {
     flex: 2;
     margin-left: 5%;
-    margin-right: 5%;
     margin-top: 3%;
   }
 }

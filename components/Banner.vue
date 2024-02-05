@@ -1,13 +1,11 @@
 <template>
-  <div class="max-width">
-    <div class="main-banner">
+    <div class="container" id="main-banner">
       <div class="text-wrapper">
         <p class="texto1">Olá, meu nome é</p>
         <p class="texto2">Milena Santos de Oliveira</p>
         <p class="texto3">Eu sou <span class="texto4" v-html="paper"></span></p>
       </div>
     </div>
-  </div>
 </template>
 
 
@@ -62,13 +60,7 @@ export default {
 </script>
 
 <style scoped>
-.max-width{
-  width: 100%;
-  display: flex;
-  margin-left: 3%;
-}
-
-.main-banner {
+#main-banner {
   background-size: cover;
   background-position: center;
   position: relative;
@@ -78,27 +70,25 @@ export default {
 }
 
 .text-wrapper{
-  padding-top: 45%;
+  padding-top: 25%;
 }
 
-.main-banner .texto1{
+#main-banner .texto1{
   color: white;
   font-size: 35px;
 }
 
-.main-banner .texto2{
+#main-banner .texto2{
   color: white;
   font-weight: 600;
   font-size: 55px;
 }
-
-.main-banner .texto3{
+#main-banner .texto3{
   color: white;
-  margin: 5px 0;
   font-size: 35px;
 }
 
-.main-banner .texto4{
+#main-banner .texto4{
   display: inline;
   border-right: 2px;
   animation: typebar 0.s steps(40) infinite;
@@ -112,15 +102,31 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .main-banner {
+  #main-banner {
     height: 400px;
     flex-direction: column;
     align-items: flex-start;
   }
+
+  #main-banner .texto1 {
+    font-size: 25px;
+  }
+
+  #main-banner .texto2 {
+    font-size: 45px;
+  }
+
+  #main-banner .texto3 {
+    font-size: 25px;
+  }
+
+  #main-banner .texto4 {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  .main-banner {
+  #main-banner {
     height: 500px;
   }
 

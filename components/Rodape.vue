@@ -56,7 +56,11 @@ section {
 
 @media (max-width: 768px) {
   .logos {
-    gap: 30px;
+    gap: 25px;
+  }
+
+  img{
+    width: 90%;
   }
 }
 </style>

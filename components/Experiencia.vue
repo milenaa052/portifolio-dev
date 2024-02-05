@@ -1,37 +1,39 @@
 <template>
     <section id="experiencia">
-        <div class="div-h1">
-            <h1>Experiência</h1>
-        </div>
-
-        <div class="wrapper">
-            <div class="titulo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="container">
+            <div class="div-h1">
+                <h1>Experiência</h1>
             </div>
 
-            <img src="../static/maleta.svg" alt="">
+            <div class="wrapper">
+                <div class="titulo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
 
-            <div class="descricao">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. 
-                        Pellentesque non vulputate ipsum. Donec interdum ante ante, tempor dictum orci tempor sed. Curabitur sit amet lectus vel eros</p>
+                <img src="../static/maleta.svg" alt="">
+
+                <div class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. 
+                            Pellentesque non vulputate ipsum. Donec interdum ante ante, tempor dictum orci tempor sed. Curabitur sit amet lectus vel eros</p>
+                </div>
             </div>
-        </div>
 
-        <div class="wrapper">
-            <div class="titulo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="wrapper">
+                <div class="titulo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <img src="../static/maleta.svg" alt="">
+
+                <div class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. 
+                            Pellentesque non vulputate ipsum. Donec interdum ante ante, tempor dictum orci tempor sed. Curabitur sit amet lectus vel eros</p>
+                </div>
             </div>
 
-            <img src="../static/maleta.svg" alt="">
-
-            <div class="descricao">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt urna sit amet massa pharetra aliquam a nec elit. 
-                        Pellentesque non vulputate ipsum. Donec interdum ante ante, tempor dictum orci tempor sed. Curabitur sit amet lectus vel eros</p>
+            <div class="buttom-cv">
+                <b-button class="download">Download CV</b-button>
             </div>
-        </div>
-
-        <div class="buttom-cv">
-            <b-button class="download">Download CV</b-button>
         </div>
     </section>
 </template>
@@ -65,12 +67,17 @@ h1{
     padding-bottom: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(100px, auto);
 }
 
-.titulo{
-    display: flex;
-    align-items: center;
+.titulo {
+  display: flex;
+  align-items: center;
+}
+
+.descricao {
+  display: flex;
+  align-items: center;
 }
 
 img {
@@ -78,16 +85,9 @@ img {
     margin: auto;
 }
 
-.descricao {
-    display: flex;
-    margin-left: auto;
-    margin-right: 10%;
-    align-items: center;
-}
-
 .download{
     background-color: #8d60db;
-    margin: 0 0 30px 50px;
+    margin-bottom: 30px;
     height: 50px;
 
 }
@@ -97,24 +97,29 @@ img {
 }
 
 @media screen and (max-width: 760px){
+
+    h1{
+        font-size: 40px;
+    }
   .wrapper {
     grid-template-columns: 1fr;
   }
 
   img {
-    width: 60%;
+    width: 15%;
     display: block;
     max-width: 80px;
   }
 
   .descricao {
     text-align: center;
-    margin: 5px 0;
+    font-size: 15px;
   }
 
   .titulo {
     text-align: center;
     margin-top: 70px;
+    font-size: 15px;
   }
 
   .wrapper .titulo, .wrapper img, .wrapper .descricao {
@@ -122,13 +127,9 @@ img {
   }
 
   .download{
-    margin: 0 0 25px 20px;
+    margin-bottom: 25px;
+    height: 40px;
   }
 }
 
-@media screen and (min-width: 768px){
-  .titulo{
-    margin-left: 60px;
-  }
-}
 </style>

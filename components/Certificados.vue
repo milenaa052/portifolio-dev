@@ -1,5 +1,5 @@
 <template>
-  <section id="certificados">
+  <section class="container">
     <h1>Certificados</h1>
     <hr>
 
@@ -60,7 +60,7 @@ h1 {
 hr {
   border: none;
   border-top: 2px solid #8d60db;
-  margin: 3% 8% 5%;
+  margin-bottom: 5%;
 }
 
 .carousel {
@@ -89,5 +89,20 @@ button {
   background-color: #d6beff;
   border-radius: 5px;
   
+}
+
+@media screen and (max-width: 768px) {
+
+  h1{
+    font-size: 40px;
+  }
+
+  img{
+    width: 70%;
+  }
+  
+  .controls button{
+    font-size: 16px;
+  }
 }
 </style>
