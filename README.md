@@ -1,4 +1,5 @@
 # portifolio-dev
+Portifólio com o Front-End versão 1 finalizado, Back-End está em andamento
 
 ## Build Setup
 
